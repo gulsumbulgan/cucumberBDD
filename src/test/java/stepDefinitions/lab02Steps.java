@@ -3,7 +3,6 @@ package stepDefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.support.PageFactory;
 import pages.Home;
 import utils.BrowserUtils;
 import utils.ConfigurationsReader;
@@ -11,7 +10,7 @@ import utils.Driver;
 
 import java.util.Map;
 
-public class steps extends BrowserUtils {
+public class lab02Steps extends BrowserUtils {
     Home home=new Home();
     @Given("The user wants to see Guru demo site")
     public void the_user_wants_to_see_guru_demo_site() {
@@ -22,6 +21,7 @@ public class steps extends BrowserUtils {
     @When("The user wants to Add Tariff Plan")
     public void the_user_wants_to_add_tariff_plan() {
         home.setAddTariff();
+        BrowserUtils.staticWait(5);
 
 
 

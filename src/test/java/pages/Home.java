@@ -62,6 +62,7 @@ public class Home extends BrowserUtils {
     private WebElement verifyheader;
 
     public void setVerification(String expectedMessage){
+
         Assert.assertEquals(verification.getText(),expectedMessage);
     }
     public void setMonthlyRental(){monthlyRental.sendKeys(ConfigurationsReader.getProperties("monthlyRental"));}
