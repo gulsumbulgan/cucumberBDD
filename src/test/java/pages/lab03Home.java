@@ -51,7 +51,6 @@ public class lab03Home extends BrowserUtils {
     public void setBackGroundCheck(String backgroundCheck) {
         for (WebElement each: backGroundCheck){
             if (each.getAttribute("id").equals(backgroundCheck)){
-                //each.click(); This is the first way we can click on an element
                 JavascriptExecutor executor= (JavascriptExecutor) Driver.getDriver();
                 executor.executeScript("arguments[0].click();", each);
             }else{
@@ -60,7 +59,6 @@ public class lab03Home extends BrowserUtils {
 
         }
     }
-
     public void setFirstName(String firstname) {
         firstName.sendKeys(firstname);
     }
